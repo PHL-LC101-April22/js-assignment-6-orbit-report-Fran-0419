@@ -6,13 +6,16 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-    <tr class="data-row" *ngFor="let satelite of satellites">
+    <tr class="data-row" *ngFor="let satelite of satellites" >
         <td>{{satelite.name}}</td>
-        <td>{{satelite.type}}</td>
+        <td *ngIf="satelite.type !== 'Space Debris'; else changeColor">{{satelite.type}}</td>
         <td>{{satelite.launchDate}}</td>
         <td>{{satelite.orbitType}}</td>
         <td>{{satelite.operational}}</td>
     </tr>
+    <ng-template #changeColor>
+            <td style="background-color: red;">{{satelite.type}}</td>
+    </ng-template>
 </table>
 
 <!-- TODO 2b: use *ngFor to display satellite data in the table -->
