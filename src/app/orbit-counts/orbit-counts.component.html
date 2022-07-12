@@ -1,6 +1,14 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
-	<div>Total: <span class="counts-total">NaN</span></div>
+	<div>Total: <span class="counts-total">{{satellites.length}}</span></div>
+	<ol>
+		<li>Communication : <span class="counts-total">{{countByType('Communication')}}</span></li> 
+		<li>Probe :         <span class="counts-total">{{countByType('Probe')}}</span></li>
+		<li>Space Station : <span class="counts-total">{{countByType('Space Station')}}</span></li>
+		<li>Telescope :     <span class="counts-total">{{countByType('Telescope')}}</span></li>
+		<li>Space Debris :  <span class="counts-total">{{countByType('Space Debris')}}</span> </li>
+		<li>Positioning :   <span class="counts-total">{{countByType('Positioning')}}</span> </li>
+	</ol>
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->
